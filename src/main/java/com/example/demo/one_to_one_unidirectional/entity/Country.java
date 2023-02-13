@@ -17,4 +17,8 @@ public class Country {
     @Id
     private UUID id;
     private String name;
+
+    @OneToOne
+    @JoinColumn(name = "capital_id")
+    private Capital capital;
 }

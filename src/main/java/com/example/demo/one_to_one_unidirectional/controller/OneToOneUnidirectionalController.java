@@ -1,6 +1,7 @@
 package com.example.demo.one_to_one_unidirectional.controller;
 
 import com.example.demo.one_to_one_unidirectional.entity.Country;
+import com.example.demo.one_to_one_unidirectional.repository.CapitalRepository;
 import com.example.demo.one_to_one_unidirectional.repository.CountryRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,6 +15,7 @@ import java.util.List;
 @RestController
 public class OneToOneUnidirectionalController {
     private final CountryRepository countryRepository;
+    private final CapitalRepository capitalRepository;
 
     @GetMapping("/countries")
     public List<Country> countryList() {
@@ -22,6 +24,7 @@ public class OneToOneUnidirectionalController {
 
     @PostMapping("/countries")
     public List<Country> saveCountryList(@RequestBody List<Country> countryList) {
+        capitalRepository.saveAll(countryList.stream().map(Country::getCapital).toList());
         return countryRepository.saveAll(countryList);
     }
 }
