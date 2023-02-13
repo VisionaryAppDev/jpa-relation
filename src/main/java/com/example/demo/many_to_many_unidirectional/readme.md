@@ -1,0 +1,5 @@
+In a many-to-many relationship, each entity can have multiple entities of the other entity associated with it. To map a many-to-many relationship using JPA, you can use the @ManyToMany annotation and the @JoinTable annotation.
+
+In this case, @JoinTable annotation is inside the Student entity because the association is from the Student entity to the Course entity. The @JoinTable annotation defines the join table that will be used to persist the relationship between the Student and Course entities. The join table holds the foreign key columns to both the Student and Course tables.
+
+So, in this example, it is chosen to have the @JoinTable annotation inside the Student entity to define the many-to-many relationship between Student and Course. But it could be the other way around, with the @JoinTable annotation inside the Course entity, it would still work in the same way.
