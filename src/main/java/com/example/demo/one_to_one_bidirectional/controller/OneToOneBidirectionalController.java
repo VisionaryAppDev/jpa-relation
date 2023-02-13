@@ -18,12 +18,12 @@ public class OneToOneBidirectionalController {
     private final EmployeeRepository employeeRepository;
     private final AddressRepository addressRepository;
 
-    @GetMapping("/users")
+    @GetMapping("/employees")
     public List<Employee> countryList() {
         return employeeRepository.findAll();
     }
 
-    @PostMapping("/users")
+    @PostMapping("/employees")
     public Employee saveCountryList() {
         UUID uuid = UUID.randomUUID();
         Employee employee = new Employee(uuid, "Test: ", new Address(UUID.randomUUID(), "Location: ", new Employee(uuid)));
