@@ -20,4 +20,9 @@ CREATE TABLE citizen_Passport (
   PRIMARY KEY (citizen_id, passport_id),
   FOREIGN KEY (citizen_id) REFERENCES Citizen(id),
   FOREIGN KEY (passport_id) REFERENCES Passport(id)
+
+  ---   Short hand
+--   citizen_id UUID REFERENCES country (id),
+--   passport_id UUID REFERENCES capital (id),
+--   PRIMARY KEY (citizen_id, passport_id)
 );
