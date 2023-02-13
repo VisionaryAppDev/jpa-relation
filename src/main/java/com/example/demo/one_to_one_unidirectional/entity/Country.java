@@ -18,7 +18,7 @@ public class Country {
     private UUID id;
     private String name;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "capital_id")
     private Capital capital;
 }
