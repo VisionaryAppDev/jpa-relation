@@ -1,6 +1,6 @@
-package com.example.demo.many_to_many.repository;
+package com.example.demo.many_to_many_unidirectional.repository;
 
-import com.example.demo.many_to_many.entity.Course;
+import com.example.demo.many_to_many_unidirectional.entity.Course;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;

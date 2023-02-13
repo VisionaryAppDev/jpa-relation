@@ -1,10 +1,9 @@
-package com.example.demo.many_to_many.controller;
+package com.example.demo.many_to_many_unidirectional.controller;
 
-import com.example.demo.many_to_many.entity.Course;
-import com.example.demo.many_to_many.entity.Student;
-import com.example.demo.many_to_many.repository.CourseRepository;
-import com.example.demo.many_to_many.repository.StudentRepository;
-import com.example.demo.one_to_many_bidirectional.entity.Feedback;
+import com.example.demo.many_to_many_unidirectional.entity.Course;
+import com.example.demo.many_to_many_unidirectional.entity.Student;
+import com.example.demo.many_to_many_unidirectional.repository.CourseRepository;
+import com.example.demo.many_to_many_unidirectional.repository.StudentRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,7 +15,7 @@ import java.util.List;
 
 @RequiredArgsConstructor
 @RestController
-public class ManyToManyController {
+public class ManyToManyUnidirectionalController {
     private final StudentRepository studentRepository;
     private final CourseRepository courseRepository;
 
