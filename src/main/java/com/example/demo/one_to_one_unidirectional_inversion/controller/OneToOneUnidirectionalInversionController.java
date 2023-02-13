@@ -12,7 +12,7 @@ import java.util.List;
 
 @RequiredArgsConstructor
 @RestController
-public class OneToOneUnidirectionalInversion {
+public class OneToOneUnidirectionalInversionController {
     private final CitizenRepository citizenRepository;
 
     @GetMapping("/citizens")
