@@ -1,0 +1,2 @@
+# NOTES
+In this package, Capital is annotated with `@JoinColumn(name = "country_id")`. The __country_id__ is a column in the Capital table. We used this column as a key to map back to the Country table. In case you want Country entity to query Capital back, you may need the Country to hold the reference (capital_id) of the Capital. You have to decide which side should contain the extra column in order to map back.
